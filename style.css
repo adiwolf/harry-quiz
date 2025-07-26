@@ -25,3 +25,22 @@ button {
 button:hover {
   background-color: #d4af37;
 }
+.character-sprite {
+  width: 150px;
+  height: 150px;
+  margin: 20px auto;
+  background-image: url('A_set_of_watercolor-style_portraits_on_textured_wa.png');
+  background-size: 450px 450px;
+  background-repeat: no-repeat;
+}
+
+/* Assign background positions to each character */
+.הארי { background-position: 0px 0px; }
+.הרמיוני { background-position: -150px 0px; }
+.רון { background-position: -300px 0px; }
+.סנייפ { background-position: 0px -150px; }
+.דמבלדור { background-position: -150px -150px; }
+.מקגונגל { background-position: -300px -150px; }
+.וולדמורט { background-position: 0px -300px; }
+.ורנון { background-position: -150px -300px; }
+.האגריד { background-position: -300px -300px; }
