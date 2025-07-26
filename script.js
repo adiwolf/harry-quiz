@@ -91,6 +91,18 @@ const questions = [
   }
 ];
 
+const characterGrid = {
+  "הארי": [0, 0],
+  "הרמיוני": [0, 1],
+  "רון": [0, 2],
+  "סנייפ": [1, 0],
+  "דמבלדור": [1, 1],
+  "מקגונגל": [1, 2],
+  "וולדמורט": [2, 0],
+  "ורנון": [2, 1],
+  "האגריד": [2, 2]
+};
+
 let currentQuestion = 0;
 let scores = {};
 
@@ -167,8 +179,26 @@ function showResult() {
     "ורנון": "אתה פשוט רוצה שקט, חדשות, ובלי ינשופים בבית.",
     "האגריד": "ענק/ית בגוף ובלב. אוהב/ת חיות משונות ואנשים טובים."
   };
-  resultBox.innerHTML = `<h2>הדמות שלך היא: ${character}</h2><div class=\"character-sprite ${character}\"></div>
-  <div class="character-sprite" id="character-image"></div>
+  const [i, j] = characterGrid[character];
+  resultBox.innerHTML = `<h2>הדמות שלך היא: ${character}</h2>
+  <div class="character-sprite" id="character-image" style="
+    display: inline-block;
+    width: 66.67px;
+    height: 100px;
+    overflow: hidden;
+  ">
+    <img src="images/A_set_of_watercolor-style_portraits_on_textured_wa.png" style="
+      width: 200px; 
+      height: 300px; 
+      display: block;
+      clip-path: inset(
+        ${i * 100}px           /* top: row * cell_height */
+        ${(2-j) * 66.67}px     /* right: (2-col) * cell_width */
+        ${(2-i) * 100}px       /* bottom: (2-row) * cell_height */
+        ${j * 66.67}px         /* left: col * cell_width */
+      );
+    ">
+  </div>
   <p>${descriptions[character]}</p>`;
 }
 
