@@ -1,0 +1,27 @@
+body {
+  font-family: 'Verdana';
+  background: #1a1a1a url('https://www.transparenttextures.com/patterns/old-wall.png');
+  color: #f0e6d2;
+  text-align: center;
+  direction: rtl;
+}
+#quiz-container, #result-container {
+  max-width: 600px;
+  margin: auto;
+  background-color: #2d2d2d;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px gold;
+}
+button {
+  background-color: gold;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+button:hover {
+  background-color: #d4af37;
+}
